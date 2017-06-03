@@ -1,0 +1,29 @@
+'use strict'
+import React from 'react'
+import { View, Text, TouchableOpacity } from 'react-native'
+import PackageComponent from '../../componets/Package/Package'
+import Icon from 'react-native-vector-icons/MaterialIcons'
+
+export default class Packege extends React.Component {
+		static navigationOptions = {
+ 		title: "Payments",
+    tabBarLabel: 'Booking',
+    // Note: By default the icon is only shown on iOS. Search the showIcon option below.
+    tabBarIcon: ({ tintColor }) => (
+       <Icon
+  name='notifications-paused' style={[styles.icon, {tintColor: tintColor}]} />
+    ),
+  }
+  render(){
+    return(
+      <View style={{
+        flex:1
+      }} >
+      
+       
+        
+			<PackageComponent />
+      </View>
+    )
+  }
+}

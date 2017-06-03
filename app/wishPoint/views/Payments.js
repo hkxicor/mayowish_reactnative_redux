@@ -1,0 +1,47 @@
+'use strict'
+import React from 'react'
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native'
+//import PackageComponent from '../../componets/Package/Package'
+import Icon from 'react-native-vector-icons/MaterialIcons'
+
+export default class Payments extends React.Component {
+	static navigationOptions = {
+    title: "Payments"
+  }
+  render(){
+    return(
+     <View style={{ backgroundColor: 'white', flex: 1, }} >
+        <ScrollView keyboardShouldPersistTaps="always" >
+<Text style={styles.wishpointname} >
+         Available travel credit: $0
+        </Text>
+
+<Text style={styles.no} >
+         Share your, link with friends to earn credit toward your next party.  
+        </Text>        
+        
+                
+        </ScrollView>  
+      
+      </View>
+    )
+  }
+}
+
+
+const styles = StyleSheet.create({
+   wishpointname: {
+	fontSize:20,
+	fontWeight: 'bold',
+	paddingTop: 20,
+	paddingLeft: 15,
+	color: '#000',
+	},
+	 no: {
+	fontSize:16,
+	
+	paddingTop: 6,
+	paddingLeft: 15,
+	},
+});
+

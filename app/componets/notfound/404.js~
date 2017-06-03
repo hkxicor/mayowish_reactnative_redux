@@ -1,0 +1,50 @@
+import React, { Component } from 'react';
+import {
+   ActivityIndicator,
+   View,
+   StyleSheet
+} from 'react-native';
+
+export default NotFound = (props) => {
+	
+   return (
+      <View style = {styles.container}>
+        <Image
+          style={styles.logo}
+          source={require('../../img/404.png')}
+        />
+         
+          <Text style={styles.heading} >Oh no!</Text>
+          <Text style={styles.heading} > No Internet found. check your connection or try again.</Text>
+           <TouchableOpacity
+          onPress={ () => this.props.navigation.goBack() }
+          style={{
+            padding:20,
+            borderRadius:5,
+            borderWidth: .8,
+            borderColor: '#d6d7da',
+            marginTop:20
+          }}>
+          <Text>{'RETRY'}</Text>
+        </TouchableOpacity>
+      </View>
+   );
+}
+
+const styles = StyleSheet.create ({
+	heading: {
+	
+	},
+   container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: 70
+   },
+   activityIndicator: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 80
+   }
+});
